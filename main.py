@@ -4,6 +4,8 @@ from typing import List
 
 from actions import io
 
+import cowsay
+
 
 def main(args: List[str]) -> None:
     """main function
@@ -12,14 +14,12 @@ def main(args: List[str]) -> None:
         args: STDIN arguments
     """
 
-    # now you can access the inputs like:
-    #    f"Hello {os.environ["INPUT_NAME"]}"
+    name, age = os.environ["INPUT_NAME"], os.environ["INPUT_AGE"]
+    message = cowsay.get_output_string("cow", f"Hello {name}. I know you are {age}!")
 
-    # you can write to output like:
-    #   io.write_to_output({var: val, ...})
-
-    pass
+    io.write_to_output({"message": message})
 
 
 if __name__ == "__main__":
     main(sys.argv)
+

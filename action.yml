@@ -15,9 +15,13 @@ runs:
 inputs:
   name:
     required: false
-    description: the person/thing you want to greet
-    default: World
+    description: your name
+    default: Alice
+  age:
+    required: false
+    description: your age
+    default: 20
 
 outputs:
-  phrase:
-    description: output variable
+  message:
+    description: cowsay greets you in his way
