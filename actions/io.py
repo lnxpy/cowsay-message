@@ -1,7 +1,7 @@
 import os
 from typing import Dict
 
-BUFFER_PATH = os.environ["GITHUB_OUTPUT"]
+BUFFER_PATH = os.environ["GITHUB_ENV"]
 
 
 def write_to_output(context: Dict[str, str]) -> None:
