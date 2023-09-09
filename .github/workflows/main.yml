@@ -19,4 +19,4 @@ jobs:
 
       - name: see what cow says
         run: |
-          echo ${{ steps.cowsay.outputs.message }}
+          echo "${{ steps.cowsay.outputs.message }}"
