@@ -11,7 +11,12 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
         
-      - uses: ./
+      - id: cowsay
+        uses: ./
         with:
           name: Sadra
           age: 22
+
+      - name: see what cow says
+        run: |
+          echo ${{ steps.cowsay.outputs.message }}
